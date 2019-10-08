@@ -27,6 +27,14 @@ app.use('/auth', expressJwt({
     ]
 }), require('./controllers/auth'))
 
+app.use(
+    "/profiles",
+    expressJwt({
+        secret: process.env.JWT_SECRET
+    }),
+    require("./controllers/profiles")
+);
+
 //Catch-All route
 app.get('*', (req, res) => {
     res.status(404).send({ message: 'Not Found' })

@@ -9,3 +9,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern-sei-26', {
 
 
 module.exports.User = require('./user')
+module.exports.ListItem = require('./listItem')
