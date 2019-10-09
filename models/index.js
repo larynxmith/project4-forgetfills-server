@@ -1,6 +1,6 @@
 let mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern-sei-26', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/forgetfills', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

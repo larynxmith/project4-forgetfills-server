@@ -35,6 +35,14 @@ app.use(
     require("./controllers/profiles")
 );
 
+app.use(
+    "/listItems",
+    expressJwt({
+        secret: process.env.JWT_SECRET
+    }),
+    require("./controllers/listItems")
+);
+
 //Catch-All route
 app.get('*', (req, res) => {
     res.status(404).send({ message: 'Not Found' })
