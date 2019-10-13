@@ -4,7 +4,9 @@ let db = require('../models')
 
 //GET all items
 router.get('/', (req, res) => {
-    db.ListItem.find()
+    db.ListItem.find({
+        userId: req.user._id
+    })
         .then(items => {
             res.status(201).send(items)
         })
@@ -19,8 +21,8 @@ router.post('/', (req, res) => {
 });
 
 //PUT to /listItems/:id
-router.put(':id', (req, res) => {
-    db.ListItem.findOneandUpdate({
+router.put('/:id', (req, res) => {
+    db.ListItem.findOneAndUpdate({
         _id: req.params.id
     },
         req.body,

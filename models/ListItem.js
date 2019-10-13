@@ -8,14 +8,15 @@ let listItem = new mongoose.Schema({
         minlength: 1
     },
     lastChanged: {
-        type: Date,
+        type: String,
         requried: true
     },
     nextChanged: {
-        type: Date,
+        type: String,
         required: true 
     },
-    itemDetails: String
+    itemDetails: String,
+    userId: String
 
 })
 
