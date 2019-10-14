@@ -8,5 +8,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/forgetfills', {
 
 
 
-module.exports.User = require('./user')
-module.exports.ListItem = require('./listItem')
+module.exports.User = require('./User')
+module.exports.ListItem = require('./ListItem')
